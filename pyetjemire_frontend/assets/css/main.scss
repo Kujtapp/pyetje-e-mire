@@ -1,0 +1,131 @@
+
+$main-blue: #16A3EA;
+$gray-background: #F5F5F5;
+$beta-blue: #004175;
+
+.header {
+    background-color: $beta-blue;
+    height: 80px;
+}
+
+.center-all {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.image-container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .services {
+      margin-top: 90px;
+      .icon-circle {
+        .icons {
+            background-color: $main-blue;
+            height: 66px;
+            width: 65px;
+            padding: 13px;
+            border-radius: 39px;
+        }
+        p{
+            text-align: center;
+        }
+      }
+  }
+
+  .last-quesitons {
+      background-color: $gray-background;
+      padding-bottom: 72px;
+      h1 {
+          text-align: center;
+          margin-top: 50px;
+          padding-top: 50px;
+      }
+      .last-question-container {
+        background: white;        
+        box-shadow: 0px 1px 5px 0px;
+    }
+    .q-content{
+        padding: 23px;
+    }
+    .q-header {
+        clear: both;
+    }
+    h4 {
+        clear: both;
+    }
+    .q-footer {
+        background: $main-blue;
+        padding: 27px;
+    }
+  }
+
+  footer {
+    padding: 35px;
+    margin-top: 15px;  
+  }
+
+  .q-content {
+      min-height: 277px;
+  }
+
+  .answers {
+      margin-top: 50px;
+  }
+
+  .border-md {
+    border-width: 2px;
+}
+//register page CSS
+
+.form-control:not(select) {
+    padding: 1.5rem 0.5rem;
+}
+
+select.form-control {
+    height: 52px;
+    padding-left: 0.5rem;
+}
+
+.form-control::placeholder {
+    color: #ccc;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.form-control:focus {
+    box-shadow: none;
+}
+
+//login page
+
+.login {
+    min-height: 100vh;
+  }
+  
+  .bg-image {
+    background-image: url('https://source.unsplash.com/WEQbe2jBg40/600x1200');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .login-heading {
+    font-weight: 300;
+  }
+  
+  .btn-login {
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 1rem;
+  }
+.pyetja{
+    margin-left: 184px;
+}
