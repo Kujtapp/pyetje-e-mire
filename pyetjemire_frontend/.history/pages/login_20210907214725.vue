@@ -34,7 +34,7 @@
                                <p>Nuk keni llogari? <nuxt-link to="/register"><span>Regjistrohu</span></nuxt-link></p>
                             </div>
                             </div>
-{{  loginForm }}
+
                         </form>
                         </div>
                     </div>
@@ -68,12 +68,3 @@ export default {
     }
 }
 </script>
-
-        // login() {
-        //     this.$auth.loginWith('laravelSanctum', {
-        //         data: {
-        //             email: 'admin@admin.com',
-        //             password: 'pass'
-        //         }
-        //     })
-        // }

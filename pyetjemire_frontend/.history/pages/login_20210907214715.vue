@@ -34,7 +34,7 @@
                                <p>Nuk keni llogari? <nuxt-link to="/register"><span>Regjistrohu</span></nuxt-link></p>
                             </div>
                             </div>
-{{  loginForm }}
+
                         </form>
                         </div>
                     </div>

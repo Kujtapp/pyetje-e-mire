@@ -13,11 +13,11 @@
                         <!-- Sign In Form -->
                         <form @click.prevent="login">
                             <div class="form-floating mb-3">
-                            <input type="email" v-model="loginForm.email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                             <label for="floatingInput">Email adresa juaj</label>
                             </div>
                             <div class="form-floating mb-3">
-                            <input type="password" v-model="loginForm.password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
                             <label for="floatingPassword">Fjalkalimi</label>
                             </div>
 
@@ -34,7 +34,7 @@
                                <p>Nuk keni llogari? <nuxt-link to="/register"><span>Regjistrohu</span></nuxt-link></p>
                             </div>
                             </div>
-{{  loginForm }}
+
                         </form>
                         </div>
                     </div>
@@ -48,32 +48,15 @@
 
 <script>
 export default {
-    data() {
-        return {
-            loginForm: {
-                email: '',
-                password: ''
-            },
-        }
-    },
-
     methods: {
-           login() {
-                try {
-                    this.$auth.loginWith('laravelSanctum', {data: this.loginForm})
-                } catch (err) {
-                   console.log('Nuk u kyq');
+        login() {
+            this.$auth.loginWith('laravelSanctum', {
+                data: {
+                    email: 'admin@admin.com',
+                    password: 'pass'
                 }
-           },
+            })
+        }
     }
 }
 </script>
-
-        // login() {
-        //     this.$auth.loginWith('laravelSanctum', {
-        //         data: {
-        //             email: 'admin@admin.com',
-        //             password: 'pass'
-        //         }
-        //     })
-        // }

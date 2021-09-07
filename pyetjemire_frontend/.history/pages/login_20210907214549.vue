@@ -34,7 +34,7 @@
                                <p>Nuk keni llogari? <nuxt-link to="/register"><span>Regjistrohu</span></nuxt-link></p>
                             </div>
                             </div>
-{{  loginForm }}
+
                         </form>
                         </div>
                     </div>
@@ -48,7 +48,8 @@
 
 <script>
 export default {
-    data() {
+    methods: {
+          data() {
         return {
             loginForm: {
                 email: '',
@@ -58,22 +59,14 @@ export default {
     },
 
     methods: {
-           login() {
+           async login() {
                 try {
-                    this.$auth.loginWith('laravelSanctum', {data: this.loginForm})
+                    await this.$auth.loginWith('laravelSanctum', {data: this.loginForm})
                 } catch (err) {
                    console.log('Nuk u kyq');
                 }
            },
     }
+    }
 }
 </script>
-
-        // login() {
-        //     this.$auth.loginWith('laravelSanctum', {
-        //         data: {
-        //             email: 'admin@admin.com',
-        //             password: 'pass'
-        //         }
-        //     })
-        // }

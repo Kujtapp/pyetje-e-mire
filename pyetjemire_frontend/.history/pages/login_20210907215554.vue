@@ -59,11 +59,11 @@ export default {
 
     methods: {
            login() {
-                try {
-                    this.$auth.loginWith('laravelSanctum', {data: this.loginForm})
-                } catch (err) {
-                   console.log('Nuk u kyq');
+                    this.$auth.loginWith('laravelSanctum', {data: {
+                    email: 'admin@admin.com',
+                    password: 'pass'
                 }
+            })
            },
     }
 }
@@ -71,9 +71,9 @@ export default {
 
         // login() {
         //     this.$auth.loginWith('laravelSanctum', {
-        //         data: {
-        //             email: 'admin@admin.com',
-        //             password: 'pass'
-        //         }
-        //     })
+                data: {
+                    email: 'admin@admin.com',
+                    password: 'pass'
+                }
+            })
         // }

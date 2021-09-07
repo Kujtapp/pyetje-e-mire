@@ -59,6 +59,7 @@ export default {
 
     methods: {
            login() {
+               debugger
                 try {
                     this.$auth.loginWith('laravelSanctum', {data: this.loginForm})
                 } catch (err) {
