@@ -10,7 +10,7 @@
         </h3>
         <p>Më e shkathët se çdo platform tjetër, tek ne do të gjeni shumë pyetje dhe përgjigje të mira</p>
         <nuxt-link to="questions/create" class="btn btn-light btn-lg text-primary mt-4 mx-3"> Parashtro Pyetjen</nuxt-link>
-        <nuxt-link to="questions/create" class="btn btn-outline-light btn-lg mt-4 px-5 mx-3"> Kyçu</nuxt-link>
+        <nuxt-link to="login" class="btn btn-outline-light btn-lg mt-4 px-5 mx-3"> Kyçu</nuxt-link>
       </div>
     </div>
   </div>

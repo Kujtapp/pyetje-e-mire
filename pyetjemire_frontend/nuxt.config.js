@@ -87,17 +87,17 @@ export default {
       },
     },
     redirect: {
-      login: '/auth/login',
+      login: '/login',
       logout: '/',
-      home: '/admin/dashboard',
+      home: '/',
     },
     resetOnError: true
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    proxy: true,
-    credentials: true
+    baseUrl: 'http://localhost:8000/',
+    credentials: true,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

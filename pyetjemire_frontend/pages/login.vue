@@ -11,7 +11,7 @@
                         <h3 class="login-heading mb-4">Mireseerdhet</h3>
 
                         <!-- Sign In Form -->
-                        <form @click.prevent="login">
+                        <form @submit.prevent="login">
                             <div class="form-floating mb-3">
                             <input type="email" v-model="loginForm.email" class="form-control" id="floatingInput" placeholder="name@example.com">
                             <label for="floatingInput">Email adresa juaj</label>
@@ -34,7 +34,6 @@
                                <p>Nuk keni llogari? <nuxt-link to="/register"><span>Regjistrohu</span></nuxt-link></p>
                             </div>
                             </div>
-{{  loginForm }}
                         </form>
                         </div>
                     </div>
@@ -48,6 +47,7 @@
 
 <script>
 export default {
+    middleware: ['guest'],
     data() {
         return {
             loginForm: {
@@ -61,6 +61,7 @@ export default {
            login() {
                 try {
                     this.$auth.loginWith('laravelSanctum', {data: this.loginForm})
+                    
                 } catch (err) {
                    console.log('Nuk u kyq');
                 }
@@ -68,12 +69,3 @@ export default {
     }
 }
 </script>
-
-        // login() {
-        //     this.$auth.loginWith('laravelSanctum', {
-        //         data: {
-        //             email: 'admin@admin.com',
-        //             password: 'pass'
-        //         }
-        //     })
-        // }

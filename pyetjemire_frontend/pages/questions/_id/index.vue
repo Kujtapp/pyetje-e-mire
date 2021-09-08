@@ -16,6 +16,7 @@
         <!-- <button type="submit" class="btn btn-warning">Pergjigju</button> -->
     </div>
 
+<div v-if="$auth.loggedIn" >
     <form @submit.prevent="submitAnswer">
             <div class="col-md-8 bg-light bg-gradient shadow-sm bg-body rounded p-4 mt-5 mx-auto">
                 <div class="form-group ">
@@ -25,6 +26,10 @@
                 <button type="submit" class="btn btn-primary px-3">Shto Përgjigje</button>
             </div>
     </form>
+</div>
+<div v-if="!$auth.loggedIn">
+  <h4>Per tu pergjigjur <nuxt-link to="/login">Kyqu</nuxt-link> ose <nuxt-link to="/register">Regjistrohu</nuxt-link> </h4>
+</div>
 
     <div class="answers col-md-8 bg-light bg-gradient p-4 shadow-sm bg-body rounded mx-auto" v-for="answer in answers" :key="answer.id">
       <b-card class="mb-2">

@@ -1,6 +1,8 @@
 <template>
   <div>
     <div class="container">
+      <div v-if="$auth.loggedIn">
+        
         <h3 class="mt-5 pyetja mb-4">Parashtro Pyetjen Tënde</h3>
         <form @submit.prevent="onSubmit">
             <div class="col-md-8 px-0 mx-auto">
@@ -30,6 +32,10 @@
                 </div>
             </div>
         </form>
+      </div>
+      </div>
+      <div v-if="!$auth.loggedIn">
+        <h4>Per te shkruar pyetje <nuxt-link to="/login">Kyqu</nuxt-link> ose <nuxt-link to="/register">Regjistrohu</nuxt-link> </h4>
       </div>
   </div>
 </template>
