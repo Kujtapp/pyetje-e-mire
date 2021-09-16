@@ -8,7 +8,9 @@ use App\Models\Question;
 class QuestionController extends Controller
 {
     public function index(){
-        $answer = Question::all(); // select * from anwers
+        
+        $answer = Question::all(); // select * from quesitons
+
         return response()->json($answer, 200);
     }
 

@@ -13,12 +13,12 @@
                         <!-- Sign In Form -->
                         <form @submit.prevent="login">
                             <div class="form-floating mb-3">
-                            <input type="email" v-model="loginForm.email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                            <label for="floatingInput">Email adresa juaj</label>
+                              <input type="email" v-model="loginForm.email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                              <label for="floatingInput">Email adresa juaj</label>
                             </div>
                             <div class="form-floating mb-3">
-                            <input type="password" v-model="loginForm.password" class="form-control" id="floatingPassword" placeholder="Password">
-                            <label for="floatingPassword">Fjalkalimi</label>
+                              <input type="password" v-model="loginForm.password" class="form-control" id="floatingPassword" placeholder="Password">
+                              <label for="floatingPassword">Fjalkalimi</label>
                             </div>
 
                             <div class="form-check mb-3">
@@ -61,7 +61,7 @@ export default {
            login() {
                 try {
                     this.$auth.loginWith('laravelSanctum', {data: this.loginForm})
-                    
+
                 } catch (err) {
                    console.log('Nuk u kyq');
                 }
